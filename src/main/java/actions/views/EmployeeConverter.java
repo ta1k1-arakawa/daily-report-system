@@ -15,7 +15,7 @@ public class EmployeeConverter {
                 ev.getId(),
                 ev.getCode(),
                 ev.getName(),
-                ev.getPasswword(),
+                ev.getPassword(),
                 ev.getAdminFlag() == null
                     ? null
                     : ev.getAdminFlag() == AttributeConst.ROLE_ADMIN.getIntegerValue()
