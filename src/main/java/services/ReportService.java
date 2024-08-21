@@ -14,7 +14,7 @@ import models.validators.ReportValidator;
 //日報テーブルの操作に関わる処理を行うクラス
 public class ReportService extends ServiceBase {
     //指定した従業員が作成した日報データを、指定されたページ数の一覧画面に表示する分取得しReportViewのリストで返す
-    public List<ReportView> getMindPerPage(EmployeeView employee, int page) {
+    public List<ReportView> getMinePerPage(EmployeeView employee, int page) {
         List<Report> reports = em.createNamedQuery(JpaConst.Q_REP_GET_ALL_MINE, Report.class)
                 .setParameter(JpaConst.JPQL_PARM_EMPLOYEE, EmployeeConverter.toModel(employee))
                 .setFirstResult(JpaConst.ROW_PER_PAGE * (page - 1))
