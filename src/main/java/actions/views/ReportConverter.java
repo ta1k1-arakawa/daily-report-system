@@ -9,7 +9,7 @@ import models.Report;
 public class ReportConverter {
     //ViewモデルのインスタンスからDTOモデルのインスタンスを作成する
     public static Report toModel(ReportView rv) {
-        return Report(
+        return new Report(
                 rv.getId(),
                 EmployeeConverter.toModel(rv.getEmployee()),
                 rv.getReportDate(),
