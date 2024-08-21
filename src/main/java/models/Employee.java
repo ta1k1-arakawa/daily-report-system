@@ -20,19 +20,19 @@ import lombok.Setter;
 //従業員データのDTOモデル
 @Table(name = JpaConst.TABLE_EMP)
 @NamedQueries({
+    //全ての従業員をidの降順に取得する
     @NamedQuery(
-          //全ての従業員をidの降順に取得する
             name = JpaConst.Q_EMP_GET_ALL,
             query = JpaConst.Q_EMP_GET_ALL_DEF),
-  //全ての日報の件数を取得する
+    //全ての日報の件数を取得する
     @NamedQuery(
             name = JpaConst.Q_EMP_COUNT,
             query = JpaConst.Q_EMP_COUNT_DEF),
-  //指定した社員番号を保持する従業員の件数を取得する
+    //指定した社員番号を保持する従業員の件数を取得する
     @NamedQuery(
             name = JpaConst.Q_EMP_COUNT_REGISTERED_BY_CODE,
             query = JpaConst.Q_EMP_COUNT_REGISTERED_BY_CODE_DEF),
-  //社員番号とハッシュ化済パスワードを条件に未削除の従業員を取得する
+    //社員番号とハッシュ化済パスワードを条件に未削除の従業員を取得する
     @NamedQuery(
             name = JpaConst.Q_EMP_GET_BY_CODE_AND_PASS,
             query = JpaConst.Q_EMP_GET_BY_CODE_AND_PASS_DEF),
